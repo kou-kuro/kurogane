@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+　<div class='main'>
+<nav class="navbar navbar-light bg-light text-raigth">
+  <a class="navbar-brand">キーワード検索</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+  <div class='title-content'>
+    <h2 class='serv-title'>
+    <%# ’経済を密に’をテーマに %>
+    ーーーーーー
+    </h2>
+    <p class='serv-explain'>
+    <%# 投資家と企業の架け橋を目指しています。 %>
+    ＝＝＝＝＝＝＝＝＝
+    </p>
+    <div class=news-topline>
+     </div>
+
+    <% if user_signed_in? && current_user.admin? && !(current_user == @user) %>
+<div class='purchase-btn'>
+  <span class='purchase-btn-text'>投稿する</span>
+  <a href=" /tweets/new">
+    <%= image_tag 'memo.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+  </a>
+</div>
+<% end %> 
