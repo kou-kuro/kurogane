@@ -1,0 +1,57 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <%# <nav class="navbar navbar-light bg-light text-raigth"> %>
+  <div class='search-box'>
+    <nav class="navbar">
+     <a class="navbar-brand">キーワード検索</a>
+        <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="googleカスタム検索" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+  </div>
+    <%= link_to '/articles/:id' do %> 
+  <div class='menu-bar'>
+   <ul class='menu-lists'>
+    <li class='backgraoud-blue' id='categories'>ビジネス
+    </li>
+    <li class='backgraoud-blue' id='categories1'>科学
+    </li>
+    <li class='backgraoud-blue' id='categories2'>テクノロジー
+    </li>
+  </ul>
+  </div>
+  <% end %>
+
+
+   <div class='item-contents'>
+    <h2 class='title'>最新ニュース</h2>
+    <ul class='item-lists'>
+    <% @data[0..7].each do |data| %>
+    <ul class='lists'>
+     <%= link_to data["url"] do %>
+      <h3 class='item-name'>
+       <%= data["title"].truncate(18) %>
+       </h3>
+        <div class='item-img-content' >
+       <%# <%= image_tag data["urlToImage"], class:"item-img" %> 
+       </div>
+      </ul>
+      <% end %> 
+     <% end  %>
+     </ul>
+   </div>
+   </div>
+    <% if user_signed_in? && current_user.admin? && !(current_user == @user) %>
+      <div class='purchase-btn'>
+         <span class='purchase-btn-text'>投稿する</span>
+            <a href=" /articles/new">
+             <%= image_tag 'memo.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+            </a>
+      </div>
+      <% end %> 
+    <div class='articles-lists'>
+     <div class='articles-title'>
+      企業メッセージ
+      </div>
+      </div>
