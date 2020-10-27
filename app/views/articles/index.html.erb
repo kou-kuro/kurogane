@@ -10,18 +10,21 @@
         </form>
     </nav>
   </div>
-    <%= link_to '/articles/:id' do %> 
+    <%# <%= link_to '/articles/:id' do %>  
   <div class='menu-bar'>
    <ul class='menu-lists'>
-    <li class='backgraoud-blue' id='categories'>ビジネス
+    <%# <li class='backgraoud-blue' id='categories'> %>
+    <%= link_to "ビジネス", '/articles/:id', class:'backgraoud-blue', id:'categories' %> 
     </li>
-    <li class='backgraoud-blue' id='categories1'>科学
+    <%# <li class='backgraoud-blue' id='categories1'>科学 %>
+    <%= link_to "科学", '/articles/science', class:'backgraoud-blue', id:'categories1' %>
     </li>
-    <li class='backgraoud-blue' id='categories2'>テクノロジー
+    <%# <li class='backgraoud-blue' id='categories2'>テクノロジー %>
+      <%= link_to "科学", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
     </li>
   </ul>
   </div>
-  <% end %>
+  <%# <% end %> 
 
 
    <div class='item-contents'>
