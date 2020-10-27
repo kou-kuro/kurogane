@@ -35,6 +35,7 @@ class ArticlesController < ApplicationController
 
 
   def show
+    news_api_key=ENV["NEWS_API_KEY"]
     uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")
     responses = Net::HTTP.get(uri)
     @moment = JSON.parse(responses)
@@ -43,8 +44,26 @@ class ArticlesController < ApplicationController
     #  responses = Net::HTTP.get(uri)
     #  @moment = JSON.parse(responses)
     #  @datas = @moment['articles']
-    #       binding.pry
   end
+
+
+ def science
+     news_api_key=ENV["NEWS_API_KEY"]
+     uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=science&apiKey=#{news_api_key}") #news_API
+     responses = Net::HTTP.get(uri)
+     @moment = JSON.parse(responses)
+     @datas = @moment['articles']
+    #  binding.pry
+ end
+
+ def technology
+  news_api_key=ENV["NEWS_API_KEY"]
+  uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=technology&apiKey=#{news_api_key}") #news_API
+  responses = Net::HTTP.get(uri)
+  @moment = JSON.parse(responses)
+  @datas = @moment['articles']
+ end
+
 
   private
   def article_params
