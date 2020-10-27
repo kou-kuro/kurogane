@@ -7,18 +7,7 @@ class ArticlesController < ApplicationController
     response = Net::HTTP.get(url)
     @moments = JSON.parse(response)
     @data = @moments['articles']
-    # binding.pry
-    #  uri = URI.parse('http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=ENV["NEWS_API_KEY"]')
-    #  responses = Net::HTTP.get(uri)
-    #  @moment = JSON.parse(responses)
-    #  @datas = @moment['articles']
   end
-  # class ArticlesController < NewsController
-  #   def news
-  #     # 親のindexを呼び出す
-  #     public_method(:index).super_method.call
-  #   end
-  # end
 
   def new
     @article = Article.new
@@ -35,17 +24,15 @@ class ArticlesController < ApplicationController
 
 
   def show
+  end
+
+  def business
     news_api_key=ENV["NEWS_API_KEY"]
     uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")
     responses = Net::HTTP.get(uri)
     @moment = JSON.parse(responses)
     @datas = @moment['articles']
-    #  uri = URI.parse('https://newsapi.org/v2/top-headlines?country=jp&category=' + @genre + '&apiKey=ENV["NEWS_API_KEY"]') #news_API
-    #  responses = Net::HTTP.get(uri)
-    #  @moment = JSON.parse(responses)
-    #  @datas = @moment['articles']
   end
-
 
  def science
      news_api_key=ENV["NEWS_API_KEY"]
