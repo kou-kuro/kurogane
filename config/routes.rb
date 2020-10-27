@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # resources :articles, only: [:index, :new, :create, :show]
   resources :articles, only: [:index, :new, :create, :show] do
     collection do 
+      get 'business'
       get 'science'
       get 'technology'
     end
