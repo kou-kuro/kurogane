@@ -29,5 +29,6 @@ class User < ApplicationRecord
            validates :lastname_kana
          end
 
-         has_many :articles
+         has_many :articles, through: :favorite, dependent: :destroy
+         has_many :favorites
 end

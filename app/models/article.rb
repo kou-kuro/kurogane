@@ -7,6 +7,8 @@ class Article < ApplicationRecord
     validates :image
   end
 
+  has_many :favorites
+  # belongs_to :user, through: :favorite, dependent: :destroy
   belongs_to :user
   has_one_attached :image
 

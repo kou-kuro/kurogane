@@ -125,8 +125,8 @@
   display: flex;
   justify-content: space-around;
   padding: 15px;
-  width: 50%;
-  height: 30px;
+  width: 45%;
+  height: 60px;
   font-size: 30px;
 
 }
@@ -134,4 +134,12 @@
 .background-blue{
   margin-left: 15px;
   padding: 15px;
+ }
+
+ .item-name{
+  text-decoration: none;
+ }
+
+ .backgraoud-blue{
+  text-decoration: none;
  }
