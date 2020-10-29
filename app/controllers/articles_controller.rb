@@ -24,6 +24,8 @@ class ArticlesController < ApplicationController
 
 
   def show
+     @article = Article.find(params[:id])
+     @favorite = Favorite.new
   end
 
   def business
@@ -54,6 +56,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
+    # params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
     params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
   end
   

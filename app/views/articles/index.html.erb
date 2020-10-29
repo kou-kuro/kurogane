@@ -58,14 +58,12 @@
         <ul class='item-lists'>
              <% @article.each do |article| %> 
               <ul class='lists'>
-             <%# <%= link_to data["url"] do %>
                  <h3 class='item-name'>
-                   <%= article.title %> 
+                   <%= link_to article.title, article_path(article.id) %> 
                  </h3>
                    <div class='item-img-content' >
-                    <%= image_tag article.image, class:"item-img" %> 
+                    <%= link_to image_tag(article.image, class:"item-img"), article_path(article.id) %> 
                    </div>
-               <%# <% end %>
               </ul>
             <% end  %> 
         </ul>

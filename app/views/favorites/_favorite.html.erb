@@ -1,0 +1,7 @@
+    <div class='favorite-btn'>
+     <% if current_user.favorited_by?(@article.id) %>
+        <%= link_to 'いいね外す', destroy_favorite_path(@article), method: :delete, emote: true %> <%= @article.favorites.count %>
+      <% else %>
+      <%= link_to 'いいね', create_favorite_path(@article), method: :post, emote: true %> <%= @article.favorites.count %>
+       <% end %>
+    </div>

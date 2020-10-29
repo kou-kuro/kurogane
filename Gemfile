@@ -64,3 +64,4 @@ group :development do
   gem 'rubocop', require: false
 end
 gem 'whenever', require: false
+gem 'jquery-rails'
