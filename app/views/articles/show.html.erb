@@ -18,6 +18,8 @@
       <%# <%= link_to 'いいね', create_favorite_path(@article), method: :post%>  <%#@article.favorites.count 
        <%# <% end %> 
     <%# </div> %> 
-    <%= render 'favorites/favorite' %>
+    <div id="favorite_buttons">
+    <%= render partial:'favorites/favorite', locals: {article: @article, favorites: @favorites} %>
+    </div>
    </div>
  </div> 

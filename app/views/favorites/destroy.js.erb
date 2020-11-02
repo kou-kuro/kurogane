@@ -1,0 +1,2 @@
+<%# $('favorite_buttons').html("<%= j(render partial: 'favorites/favorite', locals: {article: @articlet}) %>"); %>
+$("<%= @id_name %>").html("<%= escape_javascript(render partial: 'favorites/favorite', locals: {article: @articlet}) %>");

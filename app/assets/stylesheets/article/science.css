@@ -64,14 +64,16 @@
 .menu-lists{
   display: flex;
   justify-content: space-around;
-  padding: 15px;
-  width: 50%;
+  
+  padding: 20px;
+  width: 70%;
   height: 30px;
   font-size: 30px;
 
 }
 
 .background-blue{
-  margin-left: 15px;
-  padding: 15px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
  }

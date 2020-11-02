@@ -1,29 +1,39 @@
-# namespace :news do 
-#   desc "news"
-#   task news_save_box: :environment do
+namespace :news do 
+  desc "news"
+  task news_save_box: :environment do
 
 
-#     news_api_key=ENV["NEWS_API_KEY"]
-#     uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")
-#     responses = Net::HTTP.get(uri)
-#     @moment = JSON.parse(responses)
-#     @datas = @moment['articles']
-#     # @news_store = NewsStore.new
-#     @datas[0..9].each do |datas|
-#       @news_store = NewsStore.new
-#     # @news_store.url = @datas["url"] 
-#     # @news_store.title = @datas["title"]
-#     # @news_store.description = @datas["description"]
-#     # @news_store.category = "business"
-#     # @news_store.save
-#     datas["url"] = @news_store.url
-#     datas["title"] = @news_store.title
-#     datas["description"] = @news_store.description
-#     @news_store.category = "business"
-#      puts 
-#     end
-    #  @news_store.save
-    #  end
+    news_api_key=ENV["NEWS_API_KEY"]
+    uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")
+    responses = Net::HTTP.get(uri)
+    @moment = JSON.parse(responses)
+    @datas = @moment['articles']
+    @datas[0..9].each do |datas|
+      @news_store = NewsStore.new
+      @news_store.title = datas["title"]
+      @news_store.url = datas["url"]
+      @news_store.description = datas["description"]
+      @news_store.category = "business"
+      @news_store.save
+    end
+      
+    news_api_key=ENV["NEWS_API_KEY"]
+    uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")
+    responses = Net::HTTP.get(uri)
+    @moment = JSON.parse(responses)
+    @datas = @moment['articles']
+    @datas[0..9].each do |datas|
+      @news_store = NewsStore.new
+      @news_store.title = datas["title"]
+      @news_store.url = datas["url"]
+      @news_store.description = datas["description"]
+      @news_store.category = "business"
+      @news_store.save
+    end
+
+
+  end
+end
 
 
   #   <% @data[0..7].each do |data| %>
