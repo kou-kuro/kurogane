@@ -1,0 +1,11 @@
+    <div class='favorite-btn'>
+     <% if current_user.favorited_by?(@article.id) %>
+        <%= link_to destroy_favorite_path(@article), method: :delete, remote: true do %> <%= @article.favorites.count %>
+      <i class="fas fa-heart"></i>
+      <% end%>
+      <% else %>
+      <%= link_to create_favorite_path(@article), method: :post, remote: true do %> <%= @article.favorites.count %>
+        <i class="far fa-heart"></i>
+        <% end %>
+       <% end %>
+    </div>

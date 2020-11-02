@@ -52,6 +52,7 @@
   width: 37vh;
   padding: 1vw;
   background-color: #FFF;
+  overflow: scroll;
 }
 
 
@@ -114,24 +115,24 @@
 .articles-title:after {
   right: 0;
 }
-.menu-bar{
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: center;
+
+
+ .item-name{
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+ }
+ .item-name:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
 }
 
-.menu-lists{
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  width: 50%;
-  height: 30px;
-  font-size: 30px;
-
-}
-
-.background-blue{
-  margin-left: 15px;
-  padding: 15px;
+ .backgraoud-blue{
+  text-decoration: none;
  }

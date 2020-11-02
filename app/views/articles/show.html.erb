@@ -1,0 +1,25 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= link_to @article.title, '/' %>
+    </h2>
+    <div class='item-img-content'>
+      <%= image_tag @article.image,　size:'10x20', class:"item-box-img" %>
+    </div>
+    <div class="item-price-box">
+      <span class="item-price">
+        <%= @article.description %>
+      </span>
+    </div>
+    <%# <div class='favorite-btn'>
+     <% if current_user.favorited_by?(@article.id) %>
+        <%# <%= link_to 'いいね外す', destroy_favorite_path(@article), method: :delete %> <%# @article.favorites.count %>
+      <%# <% else %> 
+      <%# <%= link_to 'いいね', create_favorite_path(@article), method: :post%>  <%#@article.favorites.count 
+       <%# <% end %> 
+    <%# </div> %> 
+    <div id="favorite_buttons">
+    <%= render partial:'favorites/favorite', locals: {article: @article, favorites: @favorites} %>
+    </div>
+   </div>
+ </div> 

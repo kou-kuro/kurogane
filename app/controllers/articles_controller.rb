@@ -24,6 +24,8 @@ class ArticlesController < ApplicationController
 
 
   def show
+     @article = Article.find(params[:id])
+     @favorite = Favorite.new
   end
 
   def business
@@ -34,27 +36,28 @@ class ArticlesController < ApplicationController
     @datas = @moment['articles']
   end
 
- def science
-     news_api_key=ENV["NEWS_API_KEY"]
-     uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=science&apiKey=#{news_api_key}") #news_API
-     responses = Net::HTTP.get(uri)
-     @moment = JSON.parse(responses)
-     @datas = @moment['articles']
+  def science
+    news_api_key=ENV["NEWS_API_KEY"]
+    uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=science&apiKey=#{news_api_key}") #news_API
+    responses = Net::HTTP.get(uri)
+    @moment = JSON.parse(responses)
+    @datas = @moment['articles']
     #  binding.pry
- end
+  end
 
- def technology
-  news_api_key=ENV["NEWS_API_KEY"]
-  uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=technology&apiKey=#{news_api_key}") #news_API
-  responses = Net::HTTP.get(uri)
-  @moment = JSON.parse(responses)
-  @datas = @moment['articles']
- end
+  def technology
+    news_api_key=ENV["NEWS_API_KEY"]
+    uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=technology&apiKey=#{news_api_key}") #news_API
+    responses = Net::HTTP.get(uri)
+    @moment = JSON.parse(responses)
+    @datas = @moment['articles']
+  end
 
 
   private
   def article_params
-  params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
+    # params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
+    params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
   end
   
 end
