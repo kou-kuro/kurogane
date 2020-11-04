@@ -28,11 +28,23 @@
    <div class='item-contents'>
       <h2 class='title'>最新ニュース</h2>
          <ul class='item-lists'>
-            <% @data[0..7].each do |data| %>
+            <%# <% @data[0..7].each do |data| %>
+              <%# <ul class='lists'> %>
+                <%# <%= link_to data["url"] do %> 
+                 <%# <h3 class='item-name'> %>
+                  <%# <%= data["title"].truncate(18) %> 
+                 <%# </h3> %>
+                   <%# <div class='item-img-content' > %>
+                    <%# <%= image_tag data["urlToImage"], class:"item-img" %> 
+                   <%# </div> %>
+               <%# <% end %>  
+              <%# </ul> %>
+           <%# <% end  %> 
+             <% @news_store[0..7].each do |news_store| %>
               <ul class='lists'>
-                <%= link_to data["url"] do %>
+                <%= link_to news_store["url"] do %>
                  <h3 class='item-name'>
-                  <%= data["title"].truncate(18) %>
+                  <%= news_store["title"].truncate(18) %>
                  </h3>
                    <div class='item-img-content' >
                     <%# <%= image_tag data["urlToImage"], class:"item-img" %> 
@@ -59,7 +71,7 @@
         <ul class='item-lists'>
              <% @article.each do |article| %> 
               <ul class='lists'>
-                 <h3 class='item-name'>
+                 <h3 class='article-name'>
                    <%= link_to article.title, article_path(article.id) %> 
                  </h3>
                    <div class='item-img-content' >

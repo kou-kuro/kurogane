@@ -121,6 +121,7 @@
   position: relative;
   padding: 0.6em;
   background: #e0edff;
+  text-decoration: none;
  }
  .item-name:after {
   position: absolute;
@@ -131,8 +132,27 @@
   border-top: 15px solid #e0edff;
   width: 0;
   height: 0;
+  text-decoration: none;
 }
 
  .backgraoud-blue{
   text-decoration: none;
  }
+
+ .article-name{
+  position: relative;
+  padding: 0.6em;
+  background: #D0F0D0;
+  text-decoration: none;
+ }
+ .article-name:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #D0F0D0;
+  width: 0;
+  height: 0;
+  text-decoration: none;
+}

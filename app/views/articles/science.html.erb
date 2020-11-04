@@ -1,17 +1,17 @@
    <div class='item-contents'>
     <%= link_to '最新ニュース「科学」', root_path, method: :get, class: 'title' %>
     <ul class='item-lists'>
-    <% @datas[0..7].each do |datas| %>
-    <ul class='lists'>
-     <%= link_to datas["url"] do %>
-      <h3 class='item-name'>
-       <%= datas["title"].truncate(18) %>
-       </h3>
-        <div class='item-img-content' >
-       <%# <%= image_tag datas["urlToImage"], class:"item-img" %> 
-       </div>
-      </ul>
-      <% end %> 
-     <% end  %>
-     </ul>
+       <% @news_store[0..7].each do |news_store| %>
+          <ul class='lists'>
+           <%= link_to news_store["url"] do %>
+             <h3 class='item-name'>
+                <%= news_store["title"].truncate(18) %>
+             </h3>
+                <div class='item-img-content' >
+                    <%# <%= image_tag data["urlToImage"], class:"item-img" %> 
+                </div>
+           <% end %> 
+          </ul>
+       <% end  %>
+    </ul>
    </div>
