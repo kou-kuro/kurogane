@@ -28,5 +28,10 @@ set :output, "#{Rails.root.to_s}/log/cron.log"
 
 set :job_template, "source $HOME/.zshrc; $(which zsh) -l -c ':job'"
 
+job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; eval \"$(rbenv init -)\"; cd :path && RAILS_ENV=:environment bundle exec rake :task :output"
+
+# every 1.day, at: ['7:00 am'] do
+every 1.hour do 
   rake 'push_line:push_line_message_morning'
+  rake 'news:news_save_box'
 end
