@@ -19,7 +19,7 @@
     <%# <li class='backgraoud-blue' id='categories1'>科学 %>
     <%# <%= link_to "科学", '/articles/science', class:'backgraoud-blue', id:'categories1' %>
     <%# <li class='backgraoud-blue' id='categories2'>テクノロジー %>
-    <%= link_to "科学", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
+    <%= link_to "テクノロジー", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
    </li>
   </ul>
   <%# <% end %> 
@@ -47,12 +47,13 @@
                   <%= news_store["title"].truncate(18) %>
                  </h3>
                    <div class='item-img-content' >
-                    <%# <%= image_tag data["urlToImage"], class:"item-img" %> 
+                   <%# <%= image_tag news_store["url"], class:"item-img" %>  
                    </div>
                <% end %> 
               </ul>
            <% end  %>
          </ul>
+         <%= paginate(@news_store) %> 
    </div>
     <% if user_signed_in? && current_user.admin? && !(current_user == @user) %>
       <div class='purchase-btn'>

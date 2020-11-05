@@ -59,6 +59,14 @@
 .item-img-content {
   position: relative;
 }
+
+.item-img-content p {
+  position: absolute;/*絶対配置*/
+  color: red;/*文字は白に*/
+  top: 0;
+  left: 0;
+  }
+
 .item-contents {
   background-color: #FFF;
   display: flex;
@@ -137,6 +145,9 @@
 
  .backgraoud-blue{
   text-decoration: none;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
  }
 
  .article-name{
@@ -155,4 +166,22 @@
   width: 0;
   height: 0;
   text-decoration: none;
+}
+
+.menu-bar{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-lists{
+  display: flex;
+  justify-content: space-around;
+  
+  padding: 20px;
+  width: 70%;
+  height: 30px;
+  font-size: 30px;
+
 }

@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
     # @moments = JSON.parse(response)
     # @data = @moments['articles']
     @news_store = NewsStore.all.order("created_at DESC")
-    @news_store = NewsStore.where(category: 'all').order("created_at DESC")
+    @news_store = NewsStore.where(category: 'all').order("created_at DESC").page(params[:page]).per(6)
   end
 
   def new
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
     # responses = Net::HTTP.get(uri)
     # @moment = JSON.parse(responses)
     # @datas = @moment['articles']
-    @news_store = NewsStore.where(category: 'business').order("created_at DESC")
+    @news_store = NewsStore.where(category: 'business').order("created_at DESC").page(params[:page]).per(8)
   end
 
   def science
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     # responses = Net::HTTP.get(uri)
     # @moment = JSON.parse(responses)
     # @datas = @moment['articles']
-    @news_store = NewsStore.where(category: 'science').order("created_at DESC")
+    @news_store = NewsStore.where(category: 'science').order("created_at DESC").page(params[:page]).per(8)
   end
 
   def technology
@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
     # responses = Net::HTTP.get(uri)
     # @moment = JSON.parse(responses)
     # @datas = @moment['articles']
-    @news_store = NewsStore.where(category: 'technology').order("created_at DESC")
+    @news_store = NewsStore.where(category: 'technology').order("created_at DESC").page(params[:page]).per(8)
   end
 
 
