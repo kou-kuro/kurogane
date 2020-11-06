@@ -1,27 +1,27 @@
 <%= render "shared/header" %>
-<div class='main'>
+  <div class='main'>
   <%# <nav class="navbar navbar-light bg-light text-raigth"> %>
-  <div class='search-box'>
-    <nav class="navbar">
-     <a class="navbar-brand">キーワード検索</a>
-        <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="googleカスタム検索" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
-  </div>
+    <div class='search-box'>
+      <nav class="navbar">
+        <a class="navbar-brand">キーワード検索</a>
+         <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="googleカスタム検索" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         </form>
+      </nav>
+    </div>
     <%# <%= link_to '/articles/:id' do %>  
-  <ul class='menu-bar'>
-   <li class='menu-lists'>
-    <%= link_to "科学", '/articles/science', class:'backgraoud-blue', id:'categories1' %>
+      <ul class='menu-bar'>
+        <li class='menu-lists'>
+          <%= link_to "科学", '/articles/science', class:'backgraoud-ore', id:'categories1' %>
     <%# <li class='backgraoud-blue' id='categories'> %>
-    <%= link_to "ビジネス", '/articles/business', class:'backgraoud-blue', id:'categories' %> 
+          <%= link_to "ビジネス", '/articles/business', class:'backgraoud-pink', id:'categories' %> 
     <%# <li class='backgraoud-blue' id='categories1'>科学 %>
     <%# <%= link_to "科学", '/articles/science', class:'backgraoud-blue', id:'categories1' %>
     <%# <li class='backgraoud-blue' id='categories2'>テクノロジー %>
-    <%= link_to "テクノロジー", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
-   </li>
-  </ul>
+          <%= link_to "テクノロジー", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
+        </li>
+      </ul>
   <%# <% end %> 
 
 
@@ -47,7 +47,7 @@
                   <%= news_store["title"].truncate(18) %>
                  </h3>
                    <div class='item-img-content' >
-                   <%# <%= image_tag news_store["url"], class:"item-img" %>  
+                    <%# <%= image_tag news_store["url"], class:"item-img" %>  
                    </div>
                <% end %> 
               </ul>
@@ -63,11 +63,11 @@
           </a>
       </div>
     <% end %> 
-  <div class='articles-lists'>
-      <div class='articles-title'>
-       企業メッセージ
+      <div class='articles-lists'>
+        <div class='articles-title'>
+            企業メッセージ
+        </div>
       </div>
-  </div>
 
         <ul class='item-lists'>
              <% @article.each do |article| %> 
@@ -81,6 +81,7 @@
               </ul>
             <% end  %> 
         </ul>
+  </div>
 <%# 
         <footer class='second-fotter'>
 </footer>
