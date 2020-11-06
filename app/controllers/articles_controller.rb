@@ -1,14 +1,13 @@
 class ArticlesController < ApplicationController
   def index
-    @article = Article.includes(:user).order('created_at DESC')
+    @article = Article.includes(:user).order('created_at DESC').page(params[:page]).per(1)
 
     # news_api_key=ENV["NEWS_API_KEY"]
     # url = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&apiKey=#{news_api_key}")
     # response = Net::HTTP.get(url)
     # @moments = JSON.parse(response)
     # @data = @moments['articles']
-    @news_store = NewsStore.all.order("created_at DESC")
-    @news_store = NewsStore.where(category: 'all').order("created_at DESC").page(params[:page]).per(6)
+    @news_store = NewsStore.where(category: 'all').order("created_at DESC").page(params[:page]).per(8)
   end
 
   def new

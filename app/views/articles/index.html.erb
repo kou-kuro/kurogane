@@ -40,14 +40,15 @@
                <%# <% end %>  
               <%# </ul> %>
            <%# <% end  %> 
-             <% @news_store[0..7].each do |news_store| %>
+             <% @news_store[0..8].each do |news_store| %>
               <ul class='lists'>
                 <%= link_to news_store["url"] do %>
-                 <h3 class='item-name'>
+                 <%# <h3 class='item-name'>
                   <%= news_store["title"].truncate(18) %>
-                 </h3>
+                 <%# </h3>  %>
                    <div class='item-img-content' >
-                    <%# <%= image_tag news_store["url"], class:"item-img" %>  
+                    <%= image_tag news_store["url"], class:"item-img" %> 
+                    <p><%= news_store["title"].truncate(18) %></p> 
                    </div>
                <% end %> 
               </ul>
@@ -81,6 +82,9 @@
               </ul>
             <% end  %> 
         </ul>
+        <div class='place-next'>
+        <%= paginate(@article) %>
+        </div>
   </div>
 <%# 
         <footer class='second-fotter'>

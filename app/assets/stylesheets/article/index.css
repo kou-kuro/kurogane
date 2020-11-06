@@ -133,7 +133,7 @@
  .item-name{
   position: relative;
   padding: 0.6em;
-  background: #e0edff;
+  background: #F5B461;
   text-decoration: none;
  }
  .item-name:after {
@@ -142,7 +142,7 @@
   top: 100%;
   left: 30px;
   border: 15px solid transparent;
-  border-top: 15px solid #e0edff;
+  border-top: 15px solid #F5B461;
   width: 0;
   height: 0;
   text-decoration: none;
@@ -171,7 +171,7 @@
  .article-name{
   position: relative;
   padding: 0.6em;
-  background: #D0F0D0;
+  background: #EC524B;
   text-decoration: none;
  }
  .article-name:after {
@@ -180,7 +180,7 @@
   top: 100%;
   left: 30px;
   border: 15px solid transparent;
-  border-top: 15px solid #D0F0D0;
+  border-top: 15px solid #EC524B;
   width: 0;
   height: 0;
   text-decoration: none;
@@ -201,5 +201,9 @@
   width: 70%;
   height: 30px;
   font-size: 30px;
+}
 
+.place-next{
+  display: flex;
+  justify-content: center;
 }

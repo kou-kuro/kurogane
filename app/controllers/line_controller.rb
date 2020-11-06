@@ -1,4 +1,4 @@
-# class LineController < ApplicationController
+class LineController < ApplicationController
 
 #   require 'line/bot'
 
@@ -14,3 +14,4 @@
 #   }
 #   user_ids = [user_id1, user_id2, ...]
 #   client.multicast(user_ids, <message>)
+end
