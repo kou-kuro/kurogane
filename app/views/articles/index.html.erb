@@ -56,7 +56,8 @@
          </ul>
          <%= paginate(@news_store) %> 
    </div>
-    <% if user_signed_in? && current_user.admin? && !(current_user == @user) %>
+    <%# <% if user_signed_in? && current_user.admin? && !(current_user == @user) %> 
+     <% if user_signed_in?%>
       <div class='purchase-btn'>
          <span class='purchase-btn-text'>投稿する</span>
           <a href="/articles/new">
