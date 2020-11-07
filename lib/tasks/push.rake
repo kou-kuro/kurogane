@@ -2,16 +2,29 @@ namespace :push_line do
   desc "push_line"
   task push_line_message_morning: :environment do # 以下にpush機能のタスクを書く。
     @news_store = NewsStore.all.order("created_at DESC").where(category: 'all')
+    # str = ""
+    # push = ""
+    # @news_store[0..3].each do |news_store|
+    #   titles = news_store["title"]
+    #   urls = news_store["url"]
+    # end
+    # @titles = titles
+    # @urls = urls
+    # @titles.zip(@urls)[0..3].each do |titles, urls|
+    #   str << titles
+    #   push << urls
+    # end
+    # @str = str
+    # @push = push
+    # str_push = @str + @push
     str = ""
     @news_store[0..3].each do |news_store|
-      str << news_store["title"] 
+      str << news_store["title"]
     end
-    @str = str
     message = {
       type: 'text',
       # text: 'さぁ、休憩しましょう',
-      text: @str
-
+      text: str
     }
     
       client = Line::Bot::Client.new { |config|
