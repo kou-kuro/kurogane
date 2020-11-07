@@ -65,8 +65,7 @@
   padding: 1rem 3rem;
   color: #fff;
   border-radius: 100vh;
-  background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
-  background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+  background-color: #9AD3BC;
   text-decoration: none;
 }
 
@@ -74,7 +73,6 @@
   padding: 1rem 3rem;
   color: #fff;
   border-radius: 100vh;
-  background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
-  background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+  background-color: #9AD3BC;
   text-decoration: none;
 }

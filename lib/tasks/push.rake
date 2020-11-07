@@ -3,8 +3,6 @@ namespace :push_line do
   task push_line_message_morning: :environment do # 以下にpush機能のタスクを書く。
     @news_store = NewsStore.all.order("created_at DESC").where(category: 'all')
     @news_store[0..7].each do |news_store|
-      text += news_store
-
     message = {
       type: 'text',
       # text: 'さぁ、休憩しましょう',
