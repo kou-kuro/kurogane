@@ -14,6 +14,7 @@ namespace :news do
       @news_store.url = data["url"]
       @news_store.description = data["description"]
       @news_store.category = "all"
+      @news_store.urlToImage = data["urlToImage"]
       @news_store.save
     end
     
@@ -29,6 +30,7 @@ namespace :news do
       @news_store.url = datas["url"]
       @news_store.description = datas["description"]
       @news_store.category = "business"
+      @news_store.urlToImage = datas["urlToImage"]
       @news_store.save
     end
       
@@ -44,6 +46,7 @@ namespace :news do
       @news_store.url = datas["url"]
       @news_store.description = datas["description"]
       @news_store.category = "science"
+      @news_store.urlToImage = datas["urlToImage"]
       @news_store.save
     end
 
@@ -59,6 +62,7 @@ namespace :news do
       @news_store.url = datas["url"]
       @news_store.description = datas["description"]
       @news_store.category = "technology"
+      @news_store.urlToImage = datas["urlToImage"]
       @news_store.save
     end
   end
