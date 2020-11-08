@@ -5,6 +5,7 @@ class CreateNewsStores < ActiveRecord::Migration[6.0]
       t.text   :description
       t.string :url,       null: false
       t.string :category,  null: false
+      t.string :urlToImage
       t.timestamps
     end
   end
