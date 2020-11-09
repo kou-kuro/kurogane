@@ -259,9 +259,9 @@
   height: 300px;
 }
 
-.image-font1{
+/* .image-font1{
   color: #495464;
-}
+} */
 .tab-title{
   display: flex;
   justify-content: center;
@@ -279,4 +279,8 @@
 .embed-responsive-item{
     width: 10px;
     padding-bottom: 20%;
+  }
+
+  .font-ch{
+    text-shadow:1px 0 5px black;
   }

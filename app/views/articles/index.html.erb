@@ -13,19 +13,19 @@
     <div class="carousel-item active">
       <%= image_tag "img_2190eb9e7bf346ece5ee8d796a014577872152.jpg", class: 'back-image' %> 
        <div class="carousel-caption d-none d-md-block">
-    <h2 class='image-font1'>"わかりやすい"</h2>
+    <h2 class='image-font1 font-ch'>"わかりやすい"</h2>
   </div>
     </div>
     <div class="carousel-item">
    <%= image_tag "backimage.jpg", class: 'back-image' %>
     <div class="carousel-caption d-none d-md-block">
-    <h2 class='image-font2'>経済や</h2>
+    <h2 class='image-font2 font-ch'>経済や</h2>
   </div> 
     </div>
     <div class="carousel-item">
  <%= image_tag "img_8be066a4946ca2508c59bcfa8efa9d20668794.jpg", class: 'back-image' %>　
      <div class="carousel-caption d-none d-md-block">
-    <h2 class='image-font3'>投資を</h2>
+    <h2 class='image-font3 font-ch'>投資を</h2>
   </div> 
      </div>
      </div>
@@ -57,7 +57,7 @@
                 <%= link_to news_store["url"] do %>
                    <div class='item-img-content' >
                     <%= image_tag news_store["urlToImage"], class:"item-img" %> 
-                    <p><%= news_store["title"].truncate(18) %></p> 
+                    <p class="font-ch"><%= news_store["title"].truncate(18) %></p> 
                    </div>
                <% end %> 
               </ul>
