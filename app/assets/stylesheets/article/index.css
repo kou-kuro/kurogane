@@ -140,6 +140,7 @@
   padding: 0.6em;
   background: #F5B461;
   text-decoration: none;
+  width: 60%;
  }
  .item-name:after {
   position: absolute;
