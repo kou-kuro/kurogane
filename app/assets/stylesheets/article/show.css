@@ -26,9 +26,9 @@
 }
 
 .item-box-img {
-  height: 25vh;
-  width: 60vw;
-  min-height: 500px;
+  height: 15vh;
+  width: 20vw;
+  min-height: 200px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
 }
@@ -48,6 +48,11 @@
 .item-price-box>.item-postage {
   font-size: 16px;
 }
+.exbox{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 .item-red-btn {
@@ -55,13 +60,10 @@
   background-color: #ea352d;
   font-size: 24px;
   font-weight: bold;
+  width: 20;
   color: #FFF;
   margin: 20px 0px;
   padding: 2vh 10vw;
-}
-
-.or-text {
-  font-size: 20px;
 }
 
 .item-destroy {

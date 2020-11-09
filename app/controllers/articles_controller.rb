@@ -30,6 +30,31 @@ class ArticlesController < ApplicationController
      @favorite = Favorite.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+    redirect_to root_path unless current_user.id == @article.user_id
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    if current_user.id == @article.user_id
+      @article.destroy
+      redirect_to root_path
+    else
+      redirect_to action: :index
+    end
+  end
+
+
   def business
     # news_api_key=ENV["NEWS_API_KEY"]
     # uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")

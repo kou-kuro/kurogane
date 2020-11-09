@@ -4,13 +4,21 @@
       <%= link_to @article.title, '/' %>
     </h2>
     <div class='item-img-content'>
-      <%= image_tag @article.image,　size:'10x20', class:"item-box-img" %>
+      <%= image_tag @article.image,　size:'5x10', class:"item-box-img" %>
     </div>
     <div class="item-price-box">
       <span class="item-price">
         <%= @article.description %>
       </span>
     </div>
+
+    <% if user_signed_in? && current_user.id == @article.user_id %>
+
+      <%= link_to '商品の編集', edit_article_path, method: :get, class: "item-red-btn" %>
+
+      <%= link_to '削除', article_path, method: :delete, class:'item-destroy' %>
+
+      <% end %>
     <%# <div class='favorite-btn'>
      <% if current_user.favorited_by?(@article.id) %>
         <%# <%= link_to 'いいね外す', destroy_favorite_path(@article), method: :delete %> <%# @article.favorites.count %>
