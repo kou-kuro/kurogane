@@ -185,7 +185,7 @@
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  width: 100%;
+  width: 40%;
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
@@ -195,7 +195,7 @@
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
+  padding: 15px 15%;
   text-decoration: none;
 }
 

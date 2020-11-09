@@ -75,13 +75,13 @@
 </nav> %>
    </div>
     <%# <% if user_signed_in? && current_user.admin? && !(current_user == @user) %> 
-     <% if user_signed_in? %>
-      <div class='purchase-btn'>
+     <%# <% if user_signed_in? %>
+      <%# <div class='purchase-btn'>
          <a href="/articles/new">
          <span class='purchase-btn-text'>投稿する</span>
           </a>
-      </div>
-    <% end %> 
+      </div> %>
+    <%# <% end %> 
 
     <div class="tab-title text-center">
      <h5 class=" shadow-lg p-3 mb-5 rounded">＊投資の基礎＊</h5>
@@ -117,7 +117,6 @@
   </div>
 </div>
     </div>
-    
   <% if user_signed_in? %>
       <div class='articles-lists'>
         <div class='articles-title'>
@@ -134,7 +133,7 @@
         </div>
         <%= link_to article_path(article.id) do %>
         <div class='item-img-content'>
-          <%= link_to image_tag(article.image, class: "item-img"), article_path(article.id) %>
+          <%= image_tag article.image, class: "item-img" %>
         </div>
         <% end %> 
         </li>
@@ -143,7 +142,7 @@
     <% else %>
       <h4 class="coment">~会員になると様々な企業からの情報を得られます！~</h4>
     <% end %>
-     <div class="youtube-content">
+     <div class="youtube-content text-center">
   <div class="youtube-title text-center">
    <h5 class=>☆オススメYoutube</h5>
   </div>
@@ -151,7 +150,6 @@
    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R_kzxTCcwbc" allowfullscreen></iframe>
   </div>
 </div>
-
         <%= render "shared/second-footer.html.erb" %>
 </div>
 </div>

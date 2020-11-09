@@ -13,12 +13,9 @@
     </div>
 
     <% if user_signed_in? && current_user.id == @article.user_id %>
-
-      <%= link_to '商品の編集', edit_article_path, method: :get, class: "item-red-btn" %>
-
+      <%= link_to '記事の編集', edit_article_path, method: :get, class: "item-red-btn" %>
       <%= link_to '削除', article_path, method: :delete, class:'item-destroy' %>
-
-      <% end %>
+    <% end %>
     <%# <div class='favorite-btn'>
      <% if current_user.favorited_by?(@article.id) %>
         <%# <%= link_to 'いいね外す', destroy_favorite_path(@article), method: :delete %> <%# @article.favorites.count %>
