@@ -71,7 +71,7 @@ end
 gem 'whenever', require: false
 gem 'jquery-rails'
 group :production do
-  gem 'rails_12factor'
+  # gem 'rails_12factor'
   gem 'unicorn', '5.4.1'
 end
 gem 'kaminari'
