@@ -7,9 +7,10 @@ Rails.application.routes.draw do
       get 'science'
       get 'technology'
     end
+    resources :favorites, only: [:create, :destroy]
   end
-  post 'favorite/:id' => 'favorites#create', as: 'create_favorite'
-  delete 'favorite/:id' => 'favorites#destroy', as: 'destroy_favorite' 
-
-  resources :news, only: [:index, :create]
+  # post 'favorite/:id' => 'favorites#create', as: 'create_favorite'
+  # delete 'favorite/:id' => 'favorites#destroy', as: 'destroy_favorite' 
+  
+  # resources :news, only: [:index, :create]
 end
