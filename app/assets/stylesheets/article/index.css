@@ -285,3 +285,8 @@
   .font-ch{
     text-shadow:1px 0 5px black;
   }
+  .qr-name{
+    display: flex;
+    justify-content: center;
+    
+  }
