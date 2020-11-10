@@ -1,13 +1,6 @@
 class ArticlesController < ApplicationController
   def index
     @article = Article.includes(:user).order('created_at DESC')
-    # .page(params[:page]).per(1)
-
-    # news_api_key=ENV["NEWS_API_KEY"]
-    # url = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&apiKey=#{news_api_key}")
-    # response = Net::HTTP.get(url)
-    # @moments = JSON.parse(response)
-    # @data = @moments['articles']
     @news_store = NewsStore.where(category: 'all').order("created_at DESC").page(params[:page]).per(8).where.not(urlToImage: false)
   end
 
@@ -56,36 +49,20 @@ class ArticlesController < ApplicationController
 
 
   def business
-    # news_api_key=ENV["NEWS_API_KEY"]
-    # uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=business&apiKey=#{news_api_key}")
-    # responses = Net::HTTP.get(uri)
-    # @moment = JSON.parse(responses)
-    # @datas = @moment['articles']
     @news_store = NewsStore.where(category: 'business').order("created_at DESC").page(params[:page]).per(8).where.not(urlToImage: false)
   end
 
   def science
-    # news_api_key=ENV["NEWS_API_KEY"]
-    # uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=science&apiKey=#{news_api_key}") #news_API
-    # responses = Net::HTTP.get(uri)
-    # @moment = JSON.parse(responses)
-    # @datas = @moment['articles']
     @news_store = NewsStore.where(category: 'science').order("created_at DESC").page(params[:page]).per(8).where.not(urlToImage: false)
   end
 
   def technology
-    # news_api_key=ENV["NEWS_API_KEY"]
-    # uri = URI.parse("http://newsapi.org/v2/top-headlines?country=jp&category=technology&apiKey=#{news_api_key}") #news_API
-    # responses = Net::HTTP.get(uri)
-    # @moment = JSON.parse(responses)
-    # @datas = @moment['articles']
     @news_store = NewsStore.where(category: 'technology').order("created_at DESC").page(params[:page]).per(8).where.not(urlToImage: false)
   end
 
 
   private
   def article_params
-    # params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
     params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
   end
   
