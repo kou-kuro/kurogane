@@ -32,7 +32,7 @@ class User < ApplicationRecord
 
          has_many :articles, dependent: :destroy
          has_many :favorite_articles, through: :favorites
-         has_many :favorites
+         has_many :favorites, dependent: :destroy
          def favorited_by?(article_id)
           favorites.where(article_id: article_id).exists?
          end
