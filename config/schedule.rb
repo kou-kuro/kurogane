@@ -24,7 +24,7 @@ require File.expand_path(File.dirname(__FILE__) + "/environment")
 
 # set :environment, Rails.env.to_sym
 rails_env = ENV['RAILS_ENV'] || :development
-set :environment, rails_env
+set :environment, :production
 env :PATH, ENV['PATH']
 set :output, "#{Rails.root.to_s}/log/cron.log"
 
