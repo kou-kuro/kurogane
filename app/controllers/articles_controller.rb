@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :new]
+  before_action :move_to_new, only: [:edit, :show]
+
+
   def index
     @article = Article.includes(:user).order('created_at DESC')
     @news_store = NewsStore.where(category: 'all').order("created_at DESC").page(params[:page]).per(8).where.not(urlToImage: false)
@@ -47,6 +51,9 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def move_to_new
+    redirect_to action: :new unless user_signed_in?
+  end
 
   def business
     @news_store = NewsStore.where(category: 'business').order("created_at DESC").page(params[:page]).per(8).where.not(urlToImage: false)
