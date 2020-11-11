@@ -24,13 +24,13 @@ require File.expand_path(File.dirname(__FILE__) + "/environment")
 
 # set :environment, Rails.env.to_sym
 rails_env = ENV['RAILS_ENV'] || :development
-set :environment, :production
+set :environment, rails_env
 env :PATH, ENV['PATH']
 set :output, "#{Rails.root.to_s}/log/cron.log"
 
 set :job_template, "source $HOME/.zshrc; $(which zsh) -l -c ':job'"
 
-job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; eval \"$(rbenv init -)\"; cd :path && RAILS_ENV=:environment bundle exec rake :task :output"
+job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; eval \"$(rbenv init -)\"; cd :path && RAILS_ENV=production bundle exec rake :task :output"
 
 # every 1.day, at: ['7:00 am'] do
 every 1.minutes do 
