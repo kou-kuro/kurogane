@@ -289,5 +289,9 @@
   .qr-name{
     display: flex;
     justify-content: center;
-    
+  }
+
+  .cenden{
+    height: 30%;
+    padding-bottom: 15px;
   }

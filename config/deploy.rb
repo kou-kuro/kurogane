@@ -32,3 +32,9 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+namespace :load do
+  task :defaults do
+    set :whenever_environment,  ->{ fetch :rails_env, fetch(:stage, "production") }
+  end
+end
