@@ -1,0 +1,16 @@
+.news-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+  /* margin-right: 30px; */
+  background-color: #F6F5F1;
+  justify-items: center;
+}
+
+.news-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}

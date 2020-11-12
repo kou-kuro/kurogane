@@ -7,6 +7,13 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("../index")
+require("../create")
+//= require jquery
+//= require jquery_ujs
+//= require jquery.turbolinks
+//= require turbolinks
+//= require_tree .
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
