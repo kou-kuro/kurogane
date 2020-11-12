@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
   before_action :authenticate_user!, only: [:edit, :new]
   before_action :move_to_new, only: [:edit, :show]
 
@@ -73,4 +74,5 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :description, :category_id, :image).merge(user_id: current_user.id)
   end
   
+
 end

@@ -7,7 +7,9 @@
   padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
+
   background-color: #F6F5F1;
+
 }
 
 .title-bar {
@@ -35,12 +37,15 @@
   display: flex;
   list-style: none;
   align-items: flex-end;
+
   padding: 1rem 2rem;
   /* background: white; */
+
 }
 
 
 .user-nickname {
+
     padding: 1rem 3rem;
     color: #fff;
     border-radius: 100vh;
@@ -76,3 +81,4 @@
   background-color: #9AD3BC;
   text-decoration: none;
 }
+

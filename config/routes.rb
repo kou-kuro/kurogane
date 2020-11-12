@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: 'articles#index'
   resources :articles do
     collection do 
@@ -14,3 +15,4 @@ Rails.application.routes.draw do
   
   # resources :news, only: [:index, :create]
 end
+
