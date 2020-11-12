@@ -32,7 +32,7 @@ env :PATH, ENV['PATH']
 job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; cd :path && RAILS_ENV=production bundle exec rake :task"
 
 # every 1.day, at: ['7:00 am'] do
-every 1.minutes do 
+every 5.minutes do 
   rake 'push_line:push_line_message_morning'
   rake 'news:news_save_box'
 end
