@@ -1,24 +1,44 @@
-# README
+# 'kurogane'のwebサイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* webサイトの概要
 
-Things you may want to cover:
+      このサイトはニュース・投資情報のまとめサイトです。
 
-* Ruby version
+情報は基本経済などを中心としています。また、ニュースをまとめているだけではなく、投資情報などを共有できるような投稿サイトの面も有しています。
+#
+* このサイトの作成理由
 
-* System dependencies
+ 私自信が前職で感じた若い人たちを中心に投資などの普及ができたらと考えたからです。
+ #
+* このサイトのURL
 
-* Configuration
+http://
+#
+* テスト用アカウント
 
-* Database creation
+ Basic認証:ユーザー名():pw(),
+ #
+ * 利用方法
 
-* Database initialization
+ 新規登録を行う→自分の気になるニュースがあれば、画像をクリックするとニュースのサイトに遷移できる。また、投稿されている記事をクリックすると記事の詳細に遷移また気に入った記事であれば「いいね」もできるようにしている。また、一番下のQRを読み込みLINEの友達追加をして頂くと1時間に一度最新のニュースがLINEに届けます。
+#
+* 目指した課題解決
 
-* How to run the test suite
+        老後のお金関連の不安を解消するため。
 
-* Services (job queues, cache servers, search engines, etc.)
+若い人たちを中心に手軽に投資情報、ニュースなどを取得して資産運用の機会につながれば、
+皆が将来の年金などの不安を解消できるのではないかと。
+#
+* 洗い出した要件
 
-* Deployment instructions
+ユーザー認証機能 / 記事投稿機能 / いいね機能 / LINEAPI / NEWSAPI /
+#
+* 実装した機能についてのGIFと説明
 
-* ...
+
+
+#
+* データベース設計
+#
+* ローカルでの動作方法
+#
