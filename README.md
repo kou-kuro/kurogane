@@ -35,10 +35,66 @@ http://
 #
 * 実装した機能についてのGIFと説明
 
+・いいね機能。
+
+気に入った記事をいいね！できる機能。投稿者の評価へと。
+[![Image from Gyazo](https://i.gyazo.com/1321b28c7433a70b94f9e914c5b02b02.gif)](https://gyazo.com/1321b28c7433a70b94f9e914c5b02b02)
+・LINE通知（ニュース）
+
+QRから友達追加をしていただけると6時間ごとにニュースが届くようになります。
+[![Image from Gyazo](https://i.gyazo.com/08d590206e778add71a6fdd75f6113f1.gif)](https://gyazo.com/08d590206e778add71a6fdd75f6113f1)
 
 
 #
 * データベース設計
+
+      ・usersテーブル
+
+| colum          |  Type       | Options      |
+| -------------- | ----------- | ------------ |
+| email          | string      | null: false  |
+| password       | string      | null: false  |
+| nickname       | string      | null: false  |
+| firstname      | string      | null: false  |
+| lastname       | string      | null: false  |
+| firstname_kana | string      | null: false  |
+| lastname_kana  | string      | null: false  |
+
+  ・Association
+ - has_many :article, through: :favorite
+ - has_many :favorite
+
+       articleテーブル
+
+| Colum          |  Type       | Options      |
+| -------------- | ----------- | ------------ |
+| title          | string      | null: false  |
+| description    | text        | null: false  |
+| category_id    | integer     | null: false  |
+| user_id        | references  | foreign_key  |
+・Association
+ - belongs_to :user, through: :favorite
+ - has_many :favorite
+
+       favoriteテーブル
+| Colum          |  Type       | Options      |
+| -------------- | ----------- | ------------ |
+| user_id        | references  | foreign_key  |
+| article_id     | references  | foreign_key  |
+・Association
+ - belongs_to :user
+ - belongs_to :article
+
+       news_storeテーブル
+| Colum          |  Type       | Options      |
+| -------------- | ----------- | ------------ |
+| title          | string      | null: false  |
+| description    | text        | null: true   |
+| url            | string      | null: false  |
+| category       | string      | null: false  |
+| urlToImage     | string      | null: true   |
 #
 * ローカルでの動作方法
+
+basic認証の
 #
