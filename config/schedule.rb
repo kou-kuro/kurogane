@@ -27,7 +27,7 @@ rails_env = ENV['RAILS_ENV'] || :development
 set :environment, rails_env
 env :PATH, ENV['PATH']
 
-set :job_template, "source $HOME/.zshrc; $(which zsh) -l -c ':job'"
+# set :job_template, "source $HOME/.zshrc; $(which zsh) -l -c ':job'"
 
 job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; cd :path && RAILS_ENV=production bundle exec rake :task"
 
