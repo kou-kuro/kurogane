@@ -1,4 +1,3 @@
-/* 商品の概要 */
 
 .item-show {
   background-color: #f8f8f8;
@@ -33,27 +32,25 @@
   object-fit: contain;
 }
 
-.item-price-box {
+.item-description-box {
   margin: 25px 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.item-price-box>.item-price {
+.item-description-box>.item-description {
   font-size: 4vh;
   font-weight: bold;
 }
 
-.item-price-box>.item-postage {
+.item-description-box>.item-postage {
   font-size: 16px;
 }
 .exbox{
   display: flex;
   justify-content: space-between;
 }
-
-
 
 .item-red-btn {
   text-align: center;
@@ -139,9 +136,6 @@
   margin-right: 5px;
 }
 
-
-/* /商品の概要 */
-
 .comment-box {
   width: 40vw;
   background-color: #fff;
@@ -189,7 +183,6 @@
   display: flex;
   justify-content: space-between;
   width: 50vw;
-
 }
 
 .change-item-btn {

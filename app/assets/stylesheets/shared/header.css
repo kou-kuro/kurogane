@@ -37,34 +37,24 @@
   display: flex;
   list-style: none;
   align-items: flex-end;
-
   padding: 1rem 2rem;
-  /* background: white; */
-
 }
 
-
 .user-nickname {
-
-    padding: 1rem 3rem;
-    color: #fff;
-    border-radius: 100vh;
-    /* background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae)); */
-    background-color: #9AD3BC;
-    text-decoration: none;
-  }
-
-
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 100vh;
+  background-color: #9AD3BC;
+  text-decoration: none;
+}
 
 .logout {
   padding: 1rem 3rem;
   color: #fff;
   border-radius: 100vh;
-  /* background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae)); */
   background-color: #9AD3BC;
   text-decoration: none;
 }
-
 
 .login {
   padding: 1rem 3rem;
