@@ -1,185 +1,149 @@
 <%= render "shared/header" %>
-
-  <div class='main'>
-
+<div class='main'>
   <div class="slid-imag">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-   <div class="image-box">
-    <div class="carousel-item active">
-      <%= image_tag "img_2190eb9e7bf346ece5ee8d796a014577872152.jpg", class: 'back-image' %> 
-       <div class="carousel-caption d-none d-md-block">
-    <h2 class='image-font1 font-ch'>"わかりやすい"</h2>
-  </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+        <div class="carousel-inner">
+          <div class="image-box">
+            <div class="carousel-item active">
+              <%= image_tag "img_2190eb9e7bf346ece5ee8d796a014577872152.jpg", class: 'back-image' %> 
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class='image-font1 font-ch'>"わかりやすい"</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "backimage.jpg", class: 'back-image' %>
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class='image-font2 font-ch'>経済や</h2>
+                </div> 
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "img_8be066a4946ca2508c59bcfa8efa9d20668794.jpg", class: 'back-image' %>　
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 class='image-font3 font-ch'>投資を</h2>
+                </div> 
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div class="carousel-item">
-   <%= image_tag "backimage.jpg", class: 'back-image' %>
-    <div class="carousel-caption d-none d-md-block">
-    <h2 class='image-font2 font-ch'>経済や</h2>
-  </div> 
-    </div>
-    <div class="carousel-item">
- <%= image_tag "img_8be066a4946ca2508c59bcfa8efa9d20668794.jpg", class: 'back-image' %>　
-     <div class="carousel-caption d-none d-md-block">
-    <h2 class='image-font3 font-ch'>投資を</h2>
-  </div> 
-     </div>
-     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  </div>
-      <ul class='menu-bar'>
-        <li class='menu-lists'>
-          <%= link_to "科学", '/articles/science', class:'backgraoud-ore', id:'categories1' %>
-          <%= link_to "ビジネス", '/articles/business', class:'backgraoud-pink', id:'categories' %> 
-          <%= link_to "テクノロジー", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
-        </li>
-      </ul>
-
-
-   <div class='item-contents'>
-      <h6 class='title text-center'>最新ニュース</h6>
-         <ul class='item-lists'>
-             <% @news_store[0..8].each do |news_store| %>
-              <ul class='lists'>
-                <%= link_to news_store["url"] do %>
-                   <div class='item-img-content' >
-                    <%= image_tag news_store["urlToImage"], class:"item-img" %> 
-                    <p class="font-ch"><%= news_store["title"].truncate(18) %></p> 
-                   </div>
-               <% end %> 
-              </ul>
-           <% end  %>
-         </ul>
-         <%= paginate(@news_store) %> 
-  <%# <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  <ul class='menu-bar'>
+    <li class='menu-lists'>
+      <%= link_to "科学", '/articles/science', class:'backgraoud-ore', id:'categories1' %>
+      <%= link_to "ビジネス", '/articles/business', class:'backgraoud-pink', id:'categories' %> 
+      <%= link_to "テクノロジー", '/articles/technology', class:'backgraoud-blue', id:'categories2' %>
+    </li>
   </ul>
-</nav> %>
-   </div>
-    <%# <% if user_signed_in? && current_user.admin? && !(current_user == @user) %> 
-     <%# <% if user_signed_in? %>
-      <%# <div class='purchase-btn'>
-         <a href="/articles/new">
-         <span class='purchase-btn-text'>投稿する</span>
-          </a>
-      </div> %>
-    <%# <% end %> 
-
-    <div class="tab-title text-center">
-     <h5 class=" shadow-lg p-3 mb-5 rounded">＊投資の基礎＊</h5>
-     </div>
-    <div class="tab">
+  <div class='item-contents'>
+    <h6 class='title text-center'>最新ニュース</h6>
+      <ul class='item-lists'>
+        <% @news_store[0..8].each do |news_store| %>
+          <ul class='lists'>
+            <%= link_to news_store["url"] do %>
+              <div class='item-img-content' >
+                <%= image_tag news_store["urlToImage"], class:"item-img" %> 
+                <p class="font-ch"><%= news_store["title"].truncate(18) %></p> 
+              </div>
+            <% end %> 
+          </ul>
+        <% end  %>
+      </ul>
+  　<%= paginate(@news_store) %> 
+  </div>
+  <div class="tab-title text-center">
+    <h5 class=" shadow-lg p-3 mb-5 rounded">＊投資の基礎＊</h5>
+  </div>
+  <div class="tab">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item col-4 p-0">
-    <a class="nav-link active text-center" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">株式</a>
-  </li>
-  <li class="nav-item col-4 p-0">
-    <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">債券</a>
-  </li>
-  <li class="nav-item col-4 p-0">
-    <a class="nav-link text-center" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">投資信託</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  <div class="col-md-8 col-12 my-5 mx-auto">
+      <li class="nav-item col-4 p-0">
+        <a class="nav-link active text-center" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">株式</a>
+      </li>
+      <li class="nav-item col-4 p-0">
+        <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">債券</a>
+      </li>
+      <li class="nav-item col-4 p-0">
+        <a class="nav-link text-center" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">投資信託</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="col-md-8 col-12 my-5 mx-auto">
   株式とは、株式会社が資金を出資してもらった人に対して発行する証券のことです。
 株式の発行は、その企業が事業を行うために必要な資金を集める手段のひとつ。株式を発行して得た資金は、銀行借入や社債を発行して得た資金とは異なり、返済の義務はありません。利益が出たときには保有株式数に応じて配当がもらえます。また、企業が成長し株式の価値が上がったときには、その株式を売却して利益を得ることができます
-</div>
-</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-  <div class="col-md-8 col-12 my-5 mx-auto">
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="col-md-8 col-12 my-5 mx-auto">
   債券とは、国や地方公共団体、企業などが資金調達のために発行するものです。安全性は高いがもらえる利益はさほど高くない。
-  </div>
-</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-  <div class="col-md-8 col-12 my-5 mx-auto">
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="col-md-8 col-12 my-5 mx-auto">
   「投資信託（ファンド）」とは、一言でいえば「投資家から集めたお金をひとつの大きな資金としてまとめ、運用の専門家が株式や債券などに投資・運用する商品
-  </div>
-  </div>
-</div>
+        </div>
+      </div>
     </div>
+  </div>
   <% if user_signed_in? %>
-      <div class='articles-lists'>
-        <div class='articles-title'>
+    <div class='articles-lists'>
+      <div class='articles-title'>
             企業メッセージ
-        </div>
       </div>
-   <ul class='item-lists'>
-   <% @article.each do |article| %>
-      <li class='list'>
-              <div class='item-info'>
-          <h5 class='item-name'>
-            <%= link_to article.title, article_path(article.id) %>
-          </h5>
-        </div>
-        <%= link_to article_path(article.id) do %>
-        <div class='item-img-content'>
-          <%= image_tag article.image, class: "item-img" %>
-        </div>
-        <% end %> 
-        </li>
-       <% end %>
-      </ul>
-    <% else %>
-      <h4 class="coment">~会員になると様々な企業からの情報を得られます！~</h4>
-    <% end %>
-     <div class="youtube-content text-center">
-  <div class="youtube-title text-center">
-   <h5 class=>☆オススメYoutube</h5>
-  </div>
-  <div class="embed-responsive embed-responsive-16by9 ">
-   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R_kzxTCcwbc" allowfullscreen></iframe>
-  </div>
-</div>
-  <% if user_signed_in? %>
-   <div class='qr-cord'>
-    <div class='qr-name'>
-     <div class="card" style="width: 18rem;">
-        <%= image_tag "758xdczz.png", class: "bd-placeholder-img card-img-top" %>
-      <div class="card-body">
-        <p class="card-text">こちらのQRからLINEの友達登録をしていただけると毎時間にその時の最新ニュースが届くよ！</p>
-      </div>
-     </div>
     </div>
-   </div>
+    <ul class='item-lists'>
+      <% @article.each do |article| %>
+        <li class='list'>
+          <div class='item-info'>
+            <h5 class='item-name'>
+              <%= link_to article.title, article_path(article.id) %>
+            </h5>
+          </div>
+          <%= link_to article_path(article.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag article.image, class: "item-img" %>
+            </div>
+          <% end %> 
+        </li>
+      <% end %>
+    </ul>
   <% else %>
-  <div class='cenden'>
-   <h4 class='text-center'>！ログインすると毎朝LINEでニュースを届けてくれる「M&M」を友達追加できるよ！<h4>
-  </div>
+  <h4 class="coment">~会員になると様々な企業からの情報を得られます！~</h4>
   <% end %>
-        <%= render "shared/second-footer.html.erb" %>
+  <div class="youtube-content text-center">
+    <div class="youtube-title text-center">
+      <h5 class=>☆オススメYoutube</h5>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9 ">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/R_kzxTCcwbc" allowfullscreen></iframe>
+    </div>
+  </div>
+  <% if user_signed_in? %>
+    <div class='qr-cord'>
+      <div class='qr-name'>
+        <div class="card" style="width: 18rem;">
+          <%= image_tag "758xdczz.png", class: "bd-placeholder-img card-img-top" %>
+          <div class="card-body">
+            <p class="card-text">こちらのQRからLINEの友達登録をしていただけると毎時間にその時の最新ニュースが届くよ！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class='cenden'>
+      <h4 class='text-center'>！ログインすると毎朝LINEでニュースを届けてくれる「M&M」を友達追加できるよ！<h4>
+    </div>
+  <% end %>
+  <%= render "shared/second-footer.html.erb" %>
 </div>
-</div>
-    
-
-          <%# <ul class='item-lists'>
-      <% @article.each do |article| %> 
-      <%# <li class='list'>
-        <%= link_to article_path(article.id) do %>
-          <%# <%= article.title %>
-          <%# <%= image_tag article.image, class:"item-img" %> 
-        <%# <% end %> 
-        <%# </li> %>
-      <%# <% end %> 
-      <%# </ul> %> 
-
