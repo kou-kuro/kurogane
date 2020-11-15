@@ -3,7 +3,7 @@
     <ul class='item-lists'>
        <% @news_store[0..7].each do |news_store| %>
           <ul class='lists'>
-           <%= link_to news_store["url"] do %>
+           <%= link_to news_store["url"], :target=>["_blank"] do %>
                 <div class='item-img-content' >
                     <%= image_tag news_store["urlToImage"], class:"item-img" %> 
                 <p class="font-ch"><%= news_store["title"].truncate(18) %></p>
