@@ -12,11 +12,13 @@
  #
 * このサイトのURL
 
-http://
+http://54.65.234.102/
 #
 * テスト用アカウント
 
- Basic認証:ユーザー名():pw(),
+ Basic認証:ユーザー名(kou):pw(0205)
+
+アドレス（test111@gmail.com）パスワード（123456789kou）
  #
  * 利用方法
 
@@ -93,8 +95,4 @@ QRから友達追加をしていただけると6時間ごとにニュースが�
 | url            | string      | null: false  |
 | category       | string      | null: false  |
 | urlToImage     | string      | null: true   |
-#
-* ローカルでの動作方法
-
-basic認証の
 #
