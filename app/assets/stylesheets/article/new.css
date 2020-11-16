@@ -140,3 +140,25 @@
 .inc {
   font-size: 13px;
 }
+.article-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+.article-btn {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 40%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 15px 15%;
+  text-decoration: none;
+}

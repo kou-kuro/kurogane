@@ -43,8 +43,8 @@
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
        </div>
     </div>
-      <div class="sell-btn-contents">
-      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <div class="article-btn-contents">
+      <%= f.submit "投稿する" ,class:"article-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     </div>
