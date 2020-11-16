@@ -41,7 +41,7 @@ http://
 [![Image from Gyazo](https://i.gyazo.com/1321b28c7433a70b94f9e914c5b02b02.gif)](https://gyazo.com/1321b28c7433a70b94f9e914c5b02b02)
 ・LINE通知（ニュース）
 
-QRから友達追加をしていただけると6時間ごとにニュースが届くようになります。
+QRから友達追加をしていただけると6時間ごとにニュースが届くようになります。（画像のは異なる設定をしていた時です。）
 [![Image from Gyazo](https://i.gyazo.com/08d590206e778add71a6fdd75f6113f1.gif)](https://gyazo.com/08d590206e778add71a6fdd75f6113f1)
 
 
