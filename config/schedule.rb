@@ -25,7 +25,7 @@ require File.expand_path(File.dirname(__FILE__) + "/environment")
 rails_env = ENV['RAILS_ENV'] || :development
 set :environment, rails_env
 env :PATH, ENV['PATH']
-job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; cd :path && RAILS_ENV=production bundle exec rake :task"
+job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; cd :path && RAILS_ENV=environment bundle exec rake :task"
 
 every 6.hour do 
   rake 'news:news_save_box'
