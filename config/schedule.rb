@@ -31,6 +31,6 @@ every 6.hour do
   rake 'news:news_save_box'
 end
 every 5.minutes do
-  rake 'push_line_message_morning'
+  rake 'push_line:push_line_message_morning'
 end
 
