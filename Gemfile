@@ -80,3 +80,4 @@ end
 gem 'kaminari'
 gem 'jquery-turbolinks'
 gem "aws-sdk-s3", require: false
+gem 'kaminari-bootstrap', '~> 3.0.1'
