@@ -30,7 +30,7 @@ job_type :rake, "export PATH=\"$HOME/.rbenv/bin:$PATH\"; cd :path && RAILS_ENV=p
 every 6.hour do 
   rake 'news:news_save_box'
 end
-every 1.day, at: ['8:00 am'] do
+every 1.day, at: '10:00 am' do
   rake 'push_line:push_line_message_morning'
 end
 
