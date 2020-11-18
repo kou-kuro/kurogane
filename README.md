@@ -13,6 +13,7 @@
 * このサイトのURL
 
 http://54.65.234.102/
+[![Image from Gyazo](https://i.gyazo.com/2833026fb37ce510c8c755fdc12063f8.gif)](https://gyazo.com/2833026fb37ce510c8c755fdc12063f8)
 #
 * テスト用アカウント
 
